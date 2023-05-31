@@ -5,22 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Application extends Model
 {
     use HasFactory;
     protected $fillable=[
         "user_id",
-        "title",
-        "body"
+        "job_id",
+        "cv",
+        "status",
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
-
-    public function comment()
+    public function job()
     {
-        return $this->hasMany(Comment::class);
+        return $this->belongsTo(Job::class);
     }
 }

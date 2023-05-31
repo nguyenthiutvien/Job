@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->integer("id")->autoIncrement();
+        Schema::create('applications', function (Blueprint $table) {
             $table->integer("user_id");
-            $table->string("title");
-            $table->string("body");
-            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
+            $table->integer("job_id");
+            $table->string("cv");
+            $table->string("status");
             $table->timestamps();
+            $table->foreign("job_id")->references("id")->on("jobs")->onDelete("cascade");
+            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('application');
     }
 };

@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mentors', function (Blueprint $table) {
-            $table->bigIncrements("mentor_id");
+        Schema::create('categories', function (Blueprint $table) {
+            $table->integer("id")->autoIncrement();
             $table->string("name",50);
-            $table->string("email")->unique();
-            $table->string("password");
-            $table->string("address");
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mentors');
+        Schema::dropIfExists('categories');
     }
 };
