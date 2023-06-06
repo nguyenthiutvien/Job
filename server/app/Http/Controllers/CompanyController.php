@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\RegisterEmail;
+use App\Models\Company;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class CompanyController extends Controller
 {
@@ -11,7 +14,10 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        $company=Company::all();
+        return response()->json(
+            $company
+        );
     }
 
     /**
@@ -27,7 +33,28 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'company_name'=>"required|string",
+            'logo'=>"nullable|string",
+            'email'=>"required|string",
+            'password'=>"required|string",
+            'address'=>"required|string",
+            'number_phone'=>"required|numeric"
+        ]);
+
+        $company=Company::create([
+            'company_name'=>$request->company_name,
+            'logo'=>"company.png",
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'address'=>$request->address,
+            'number_phone'=>$request->number_phone
+        ]);
+
+        // Mail::to($request->email)->send(new RegisterEmail($request->company_name));
+        return response()->json(
+            $company
+        );
     }
 
     /**

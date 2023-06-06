@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ForgotPassword;
+use App\Mail\RegisterEmail;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class UserController extends Controller
@@ -37,7 +41,7 @@ class UserController extends Controller
             "avatar" => "nullable|string",
             'email' => "required|string",
             'password' => "required|string",
-            "number_phone" => "required|string",
+            "number_phone" => "required|numeric",
             "address" => "required|string"
         ]);
         $user = User::create(
@@ -50,6 +54,7 @@ class UserController extends Controller
                 "address" => $request->address
             ]
         );
+        Mail::to($request->email)->send(new RegisterEmail($request->username));
         return response()->json(
             $user
         );
@@ -100,11 +105,42 @@ class UserController extends Controller
         );
     }
 
+    public function recoverPass(Request $request, $email){
+
+        $request->validate([
+            "password"=>"required|string|min:8"
+        ]);
+           $user= User::where("email", $email)->first();
+            if (!$user) {
+                return response()->json(
+                    "Tài khoản không tồn tại"
+                );
+            }
+            $user->password=bcrypt($request->password);
+            $user->save();
+            return response()->json(
+                ["Thành công"]
+            );
+    }
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
         //
+    }
+
+
+
+    public function confirmEmail(Request $request){
+        $confirmemail=$request->email;
+        $user=User::where("email",$confirmemail)->first();
+        if ($user) {
+            $verificationCode=  Str::random(6);
+            Mail::to($confirmemail)->send(new ForgotPassword($verificationCode));
+        }
+        return response()->json(
+            $verificationCode
+        );
     }
 }

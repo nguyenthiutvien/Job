@@ -1,0 +1,53 @@
+.container--login{
+    width: 500px;
+    height: 450px;
+    background: #FFFF;
+    border-radius: 8px;
+    margin-left: 550px;
+    margin-top: 150px;
+    box-shadow: 2px 1px 2px 1px rgb(32, 32, 32);
+}
+.content--login{
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+}
+.form--login{
+    text-align: center;
+        justify-content: center;
+        align-items: center;
+    .login--email,.login--password{
+        width: 400px;
+        height: 40px;
+        outline: none;
+        // border: none;
+        border-radius: 8px;
+        &::placeholder{
+            font-size: 14px;
+            padding-left: 10px;
+        }
+    }
+
+  
+}
+.forgot--pass{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.button--login{
+  margin-left: 50px;
+  width: 400px;
+  background: rgb(17, 236, 32);
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.another--relevent{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

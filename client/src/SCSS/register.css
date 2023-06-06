@@ -1,0 +1,75 @@
+.container--register {
+  margin-left: 380px;
+  width: 940px;
+  height: 600px;
+  background: rgba(249, 246, 246, 0.6);
+  border-radius: 8px;
+  margin-top: 100px;
+  box-shadow: 2px 1px 1px 2px rgb(68, 66, 66);
+}
+
+.register--title {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.register--button button {
+  margin-left: 270px;
+  width: 400px;
+  background: #FFB347;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.or--option {
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form--register {
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.form--register .form--name {
+  width: 400px;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+}
+.form--register .form--name::-moz-placeholder {
+  font-size: 14px;
+  padding-left: 10px;
+}
+.form--register .form--name::placeholder {
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.register {
+  margin-top: 30px;
+  width: 410px;
+  margin-left: 270px;
+  background: orangered;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  text-transform: uppercase;
+}
+.register:hover {
+  cursor: pointer;
+}
+
+.login {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.login .link--to {
+  color: #84ced6;
+}/*# sourceMappingURL=register.css.map */

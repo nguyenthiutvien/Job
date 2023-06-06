@@ -1,0 +1,51 @@
+.container--form {
+  margin-left: 600px;
+  width: 500px;
+  height: 350px;
+  background: white;
+  border-radius: 8px;
+  margin-top: 250px;
+  box-shadow: 2px 1px 2px 1px rgb(32, 32, 32);
+}
+
+.title--form {
+  padding-top: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.value--button {
+  margin-top: 30px;
+  margin-left: 70px;
+}
+.value--button .data--button {
+  width: 350px;
+  height: 40px;
+  outline: none;
+  border-radius: 8px;
+}
+.value--button .data--button::-moz-placeholder {
+  font-size: 16px;
+  padding-left: 10px;
+}
+.value--button .data--button::placeholder {
+  font-size: 16px;
+  padding-left: 10px;
+}
+.value--button .confirm {
+  margin-left: -2px;
+  background: #f0e508;
+}
+.value--button .confirm:hover {
+  cursor: pointer;
+}
+
+.link--back {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.link--back .color {
+  color: #3e5cd3;
+}/*# sourceMappingURL=forgot.css.map */
