@@ -1,0 +1,53 @@
+.header ul {
+    display: flex;
+    justify-content: start;
+    list-style-type: none;
+  }
+  .header ul li{
+     margin-top: 20px;
+  }
+  .header ul li a{
+    margin-left: 10px;
+    margin-right: 20px;
+   color: rgb(36, 35, 35);
+    text-decoration: none;
+  }
+  .header ul li a:hover{
+    color: rgb(219, 21, 61);
+  }
+  .header{
+   font-size: 17px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .header ul li .login {
+    margin-left: 60px;
+    margin-right: 40px;
+  }
+  .logo{
+    width: 70px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: -10px;
+  }
+  hr{
+    border-top: 1px solid rgb(231, 223, 223);
+  }
+  .container .about{
+    border: 1px solid rgb(231, 225, 225);
+  }
+  .career a{
+    text-decoration: none;
+  }
+footer{
+    background-image: linear-gradient(to right, rgba(0, 0, 6, 0.8),rgba(0, 0, 6, 0.8)), url(https://vnn-imgs-f.vgcloud.vn/2020/11/27/11/1-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f2f2f2;
+    height: 220px;
+  }
+  footer .row ul {
+    display: block;
+    color: #dacccc;
+    list-style: none;
+  }
