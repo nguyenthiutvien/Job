@@ -31,7 +31,7 @@ const Company = () => {
         <div class='container'>
             <div class='about'>
                 <div class='row'>
-                    <img src='https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/299326047_433718502109145_4193758203224616655_n.png?stp=dst-png_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=e3f864&_nc_ohc=U95LEhhF87sAX9UNARu&_nc_ht=scontent.fdad1-4.fna&oh=00_AfDU-GLK3BeqkRgtYCgfPTkvA0dw5eyTh5WG0NZzcBjVBw&oe=6483E944' width='90%' height='90%' />
+                    <img src='https://xuatnhapkhautheoyeucau.com/wp-content/uploads/2020/07/o-1.png' width='90%' height='90%' />
                 </div><br />
                 <div class='row'>
                     <div class='col-sm-3'>
@@ -104,7 +104,7 @@ const Company = () => {
                         <div class="card-body pt-0">
                             <div>
                                 <h5>Theo dõi</h5>
-                                <p><FontAwesomeIcon icon={faFacebook} /> <FontAwesomeIcon icon={faTwitter} /> <FontAwesomeIcon icon={faTelegram} /></p>
+                                <p class='icon_company'><FontAwesomeIcon icon={faFacebook} /> <FontAwesomeIcon icon={faTwitter} /> <FontAwesomeIcon icon={faTelegram} /></p>
                                 <h5>Hình ảnh công ty</h5>
                                 <img src='https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/329141007_1398472594316712_3244195778638485817_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=O6Z4SyMT7rcAX_-Rgyi&_nc_ht=scontent.fdad2-1.fna&oh=00_AfBkYpLXRSd6OQ3jBwHpXFWaXTce5bAoFVk0Ar4psDD9tw&oe=6483C116' width='90%' height='90%' /><br /><br />
                                 <p><img src='https://ots.one-line.com/wp-content/uploads/2019/08/DSC_4823.jpg' width='50%' height='50%' /> </p>
