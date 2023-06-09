@@ -1,0 +1,116 @@
+.blog {
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.blog-posts {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-post {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.blog-post-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.blog-post-content {
+    color: #666;
+}
+
+.blog-post-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.blog-post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.blog-post-header {
+    display: flex;
+    align-items: center;
+}
+.comment-section {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.comment-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.comment-form textarea,
+.comment-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.comment-form textarea {
+    height: 100px;
+    width: 100%;
+}
+
+.comment-form button.submit {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.comment-form button.submit:hover {
+    background-color: #2980b9;
+}
+/* /===== */
+input[type="text"],
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    color: #999;
+}
